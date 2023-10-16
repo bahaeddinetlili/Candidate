@@ -4,6 +4,8 @@ package com.microservices.candidate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CandidatServices {
     @Autowired
@@ -49,6 +51,10 @@ public class CandidatServices {
 
      }
 
+
+    public List<Candidat> getCandidate() {
+        return candidatRepository.findAll();
+    }
 
 
 }
